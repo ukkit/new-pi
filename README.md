@@ -7,8 +7,11 @@
 - sudo apt-get install zsh
 - sudo chsh -s $(which zsh)
 - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-- ZSH_THEME="bira"
-
+- vi .zshrc
+> change default theme to:
+```
+ ZSH_THEME="bira"
+```
 ## Update to latest python
 ### Download and update to latest OpenSSL
 - wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
@@ -42,13 +45,13 @@ SSL=/usr/local/ssl
 ## install zram
 ### Download the script and copy to /usr/bin/ folder
 - sudo wget -O /usr/bin/zram.sh https://raw.githubusercontent.com/novaspirit/rpi_zram/master/zram.sh
-### make file executable
 - sudo chmod +x /usr/bin/zram.sh
-### edit /etc/rc.local file to run script on boot
-- sudo nano /etc/rc.local
-### add line before exit 0
-- /usr/bin/zram.sh &
-### save and exit and reboot
+- sudo vi /etc/rc.local
+> add line before exit 0
+```
+/usr/bin/zram.sh &
+```
+- save the file and reboot pi
 
 ## Commands for intalling internet-pi from geerlingguy
 - sudo apt-get install -y python3-pip
