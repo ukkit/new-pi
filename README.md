@@ -24,7 +24,7 @@
 - wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
 - tar -zxvf Python-3.9.6.tgz
 - cd Python-3.9.6
-- vi Models/Setup 
+- vi Modules/Setup 
 > UNCOMMENT following lines
 ```
 SSL=/usr/local/ssl
