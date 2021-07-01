@@ -17,7 +17,9 @@
 - ./config
 - make
 - sudo make install
-> It can take upto 10 minutes for above command to complete
+> It can take upto 10 minutes for above command to complete<br>
+> By default your manual install of openSSL will be in /usr/local/ssl. You can confirm this by checking the modify time of the ssl directory with ls -la /usr/local/ssl .
+> 
 ### Download the latest Python file
 - wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
 - tar -zxvf Python-3.9.6.tgz
