@@ -5,6 +5,10 @@ sleep 5
 sleep 5
 /usr/local/bin/pihole --wild spotify.com instagram.com
 sleep 5
+/usr/local/bin/pihole --wild discord.com discordap.net discord.gg
+sleep 5
+/usr/local/bin/pihole --wild ppy.sh
+sleep 5
 /usr/local/bin/pihole -g
 sleep 60
 /usr/local/bin/pihole restartdns
