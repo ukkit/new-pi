@@ -12,6 +12,21 @@
 ```
  ZSH_THEME="bira"
 ```
+
+## Disable bluetooth
+> sudo vi /boot/config.txt
+```
+# Disable Bluetooth
+dtoverlay=disable-bt
+```
+
+> disable related services
+```
+sudo systemctl disable hciuart.service
+sudo systemctl disable bluealsa.service
+sudo systemctl disable bluetooth.service
+```
+
 ## Update to latest python
 ### Download and update to latest OpenSSL
 - wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
