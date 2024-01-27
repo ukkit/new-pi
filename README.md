@@ -12,6 +12,30 @@
 ```
  ZSH_THEME="bira"
 ```
+- update plugins to foollowing in .zshrc file
+```
+plugins=(git docker docker-compose)
+```
+- add the following entries to .zshrc file for custom aliases
+```
+#CUSTOM ALIAS
+alias cls=clear
+alias ls='ls -al'
+
+alias up.up='sudo apt update && sudo apt upgrade -y'
+alias sail='[ -f sail ] && sh sail || sh vendor/bin/sail'
+alias pyt=python3
+alias py=python3
+alias py3=python3
+
+alias dcupdb='docker-compose up -d --build'
+alias dcdown='docker-compose down'
+alias dcrun='docker-compose run --rm'
+alias dsp='docker system prune'
+```
+
+- Setup Raspberry Pi SSH Keys for Authentication
+https://pimylifeup.com/raspberry-pi-ssh-keys/
 
 ## Disable bluetooth
 > sudo vi /boot/config.txt
