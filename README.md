@@ -53,29 +53,34 @@ sudo systemctl disable bluetooth.service
 
 ## Update to latest python
 ### Download and update to latest OpenSSL
-- wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
-- tar xvf openssl-1.1.1k.tar.gz
-- cd openssl-1.1.1k
-- ./config
-- make
-- sudo make install
+```
+wget https://www.openssl.org/source/openssl-3.3.0.tar.gz
+tar xvf openssl-3.3.0.tar.gz
+cd openssl-3.3.0
+./config
+make
+sudo make install
+```
 > It can take upto 10 minutes for above command to complete<br>
 > By default your manual install of openSSL will be in /usr/local/ssl. You can confirm this by checking the modify time of the ssl directory with ls -la /usr/local/ssl .
 > 
 ### Download the latest Python file
-- wget https://www.python.org/ftp/python/3.9.6/Python-3.9.6.tgz
-- tar -zxvf Python-3.9.6.tgz
-- cd Python-3.9.6
-- vi Modules/Setup 
-> UNCOMMENT following lines
+```
+wget https://www.python.org/ftp/python/3.12.3/Python-3.9.6.tgz
+tar -zxvf Python-3.12.3.tgz
+cd Python-3.12.3
+```
+> UNCOMMENT following lines in Modules/Setup
 ```
 SSL=/usr/local/ssl
  _ssl _ssl.c \
     -DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
     -L$(SSL)/lib -lssl -lcrypto
 ```
+```
 - ./configure --enable-optimizations
 - sudo make altinstall
+```
 > It can take upto 10 minutes for above command to complete
 
 ## python to point to python3
