@@ -55,10 +55,20 @@ sudo systemctl disable bluetooth.service
 ### Download and update to latest OpenSSL
 ```
 wget https://www.openssl.org/source/openssl-3.3.0.tar.gz
+```
+```
 tar xvf openssl-3.3.0.tar.gz
+```
+```
 cd openssl-3.3.0
+```
+```
 ./config
+```
+```
 make
+```
+```
 sudo make install
 ```
 > It can take upto 10 minutes for above command to complete<br>
@@ -67,7 +77,11 @@ sudo make install
 ### Download the latest Python file
 ```
 wget https://www.python.org/ftp/python/3.12.3/Python-3.12.3.tgz
+```
+```
 tar -zxvf Python-3.12.3.tgz
+```
+```
 cd Python-3.12.3
 ```
 > UNCOMMENT following lines in Modules/Setup
@@ -78,8 +92,10 @@ SSL=/usr/local/ssl
     -L$(SSL)/lib -lssl -lcrypto
 ```
 ```
-- ./configure --enable-optimizations
-- sudo make altinstall
+./configure --enable-optimizations
+```
+```
+sudo make altinstall
 ```
 > It can take upto 10 minutes for above command to complete
 
