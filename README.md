@@ -66,7 +66,7 @@ sudo make install
 > 
 ### Download the latest Python file
 ```
-wget https://www.python.org/ftp/python/3.12.3/Python-3.9.6.tgz
+wget https://www.python.org/ftp/python/3.12.3/Python-3.12.3.tgz
 tar -zxvf Python-3.12.3.tgz
 cd Python-3.12.3
 ```
@@ -84,7 +84,7 @@ SSL=/usr/local/ssl
 > It can take upto 10 minutes for above command to complete
 
 ## python to point to python3
-- sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.9 10
+- sudo update-alternatives --install /usr/bin/python python /usr/local/bin/python3.12.3
 
 ## install zram
 ### Download the script and copy to /usr/bin/ folder
